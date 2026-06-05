@@ -1,4 +1,4 @@
-execute as @s at @s run summon minecraft:giant ~ ~ ~ {Invulnerable:1,Tags:["goldsword","summon"],NoAI:1,ActiveEffects:[{Id:14,Amplifier:1,Duration:9999999,Ambient:1}],HandItems:[{id:"minecraft:golden_sword",Count:1b},{}]}
+execute as @s at @s run summon minecraft:giant ~ ~ ~ {Invulnerable:1,Tags:["goldsword","summon"],NoAI:1,active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:9999999,ambient:1}],HandItems:[{id:"minecraft:golden_sword",count:1},{}]}
 tp @e[tag=goldsword,tag=summon] @s
 execute as @e[tag=goldsword,tag=summon] at @s run tp @s ~ ~-10 ~ ~ 0
 execute as @e[tag=goldsword,tag=summon] at @s run tp @s ^2 ^ ^-10

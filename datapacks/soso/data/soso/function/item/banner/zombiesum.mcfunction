@@ -17,7 +17,7 @@ scoreboard players add @s[tag=onS] zombiesum 50
 execute if entity @p[team=Gc] run scoreboard players add @s[tag=onS] zombiesum 150
 
 #在副手
-execute at @s[tag=onF,scores={zombiesum=10000..}] run summon minecraft:zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attack_damage",Base:1}]}
+execute at @s[tag=onF,scores={zombiesum=10000..}] run summon minecraft:zombie ~ ~ ~ {IsBaby:1,Team:"Rg",attributes:[{id:"attack_damage",base:1}]}
 scoreboard players remove @s[tag=onF] zombiesum 10000
 
 

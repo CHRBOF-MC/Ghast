@@ -10,7 +10,7 @@
             "text": "泡岩漿可抗火。"
         },
         "icon": {
-            "item": "minecraft:command_block"
+            "id": "minecraft:command_block"
         },
         "frame": "challenge",
         "show_toast": false,

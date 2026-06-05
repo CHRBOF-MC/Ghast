@@ -47,7 +47,7 @@ execute as @s[scores={ramdon=15}] run clear @a[team=BLUE] minecraft:golden_apple
 execute as @s[scores={ramdon=15}] run clear @a[team=BLUE] minecraft:melon_slice
 
 execute as @s[scores={ramdon=16}] run tellraw @a ["",{"text":"紅隊完成委託獲得大量金蘋果。","color":"red","bold":true}]
-execute as @s[scores={ramdon=16}] run give @a[team=RED] minecraft:golden_apple{display:{Name:"\"金蘋果\"",Lore:["{\"text\":\"魔法般的食物\"}","{\"text\":\"可以快速恢復血量\"}"]}} 5
+execute as @s[scores={ramdon=16}] run give @a[team=RED] minecraft:golden_apple[custom_name="金蘋果",lore=[{"text":"魔法般的食物"},{"text":"可以快速恢復血量"}]] 5
 
 execute as @s[scores={ramdon=17}] run tellraw @a ["",{"text":"紅隊完成委託藍隊商店關閉2分鐘。","color":"red","bold":true}]
 execute as @s[scores={ramdon=17}] run scoreboard players set @a[team=BLUE] boxreset 2400

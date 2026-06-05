@@ -1,4 +1,4 @@
-execute as @a[tag=raggo] at @s run summon minecraft:ravager ~ ~ ~ {HandItems:[{Count:1,id:stone,tag:{display:{Name:"\"銳食惡牙\""},Enchantments:[{id:knockback,lvl:100}]}},{}],NoAI:1,Attributes:[{Name:"generic.attack_damage",Base:1}],Tags:["raggo"],Team:"Rg",StunTick:1,ActiveEffects:[{Id:14,Amplifier:1,Duration:999999,Ambient:1}],PortalCooldown:11}
+execute as @a[tag=raggo] at @s run summon minecraft:ravager ~ ~ ~ {HandItems:[{count:1,id:"stone",components:{"minecraft:custom_name":"銳食惡牙","minecraft:enchantments":{knockback:100}}},{}],NoAI:1,attributes:[{id:"attack_damage",base:1}],Tags:["raggo"],Team:"Rg",StunTick:1,active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:999999,ambient:1}],PortalCooldown:11}
 
 tag @a remove raggo
 

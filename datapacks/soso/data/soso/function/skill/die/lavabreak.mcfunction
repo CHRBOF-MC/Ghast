@@ -4,8 +4,8 @@ execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7
 execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7] store result entity @s Inventory[].tag{speedin:1b}.AttributeModifiers[{AttributeName:"加速"}].Amount double 0.1 run scoreboard players operation @s zTEST /= 2 zTEST
 execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7] store result score @s zTEST run data get entity @s Inventory[].tag{sfall:1b}.AttributeModifiers[{AttributeName:"緩降"}].Amount 10
 execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7] store result entity @s Inventory[].tag{sfall:1b}.AttributeModifiers[{AttributeName:"緩降"}].Amount double 0.1 run scoreboard players operation @s zTEST /= 2 zTEST
-execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7] store result score @s zTEST run data get entity @s Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockback_resistance"}].Amount 10
-execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7] store result entity @s Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockback_resistance"}].Amount double 0.1 run scoreboard players operation @s zTEST /= 2 zTEST
+execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7] store result score @s zTEST run data get entity @s Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"knockback_resistance"}].Amount 10
+execute if score dieskill zTEST matches 1 run execute as @a[team=Gc,distance=..7] store result entity @s Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"knockback_resistance"}].Amount double 0.1 run scoreboard players operation @s zTEST /= 2 zTEST
 
 
 

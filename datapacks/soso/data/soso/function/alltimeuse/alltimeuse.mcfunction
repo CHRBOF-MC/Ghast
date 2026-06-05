@@ -49,29 +49,29 @@ execute as @a if data entity @s Inventory[].tag{fly:1b} run function soso:item/b
 
 
 
-effect give @a[tag=start,team=Rg,nbt=!{ActiveEffects:[{Id:10b}]}] minecraft:regeneration 999999 0 true
+effect give @a[tag=start,team=Rg,nbt=!{active_effects:[{id:"minecraft:regeneration"}]}] minecraft:regeneration 999999 0 true
 effect give @a[tag=start,team=Rg] minecraft:slowness 2 0 true
 execute as @a[tag=start,team=Rg,nbt=!{HurtTime:0s}] at @s if entity @p[distance=..5,team=Gc,tag=start] run effect give @s minecraft:speed 2 3 true
 effect give @a[tag=start,team=Rg] minecraft:resistance 2 3 true
-effect clear @a[nbt={SelectedItem:{tag:{nonslow:1b}}}] minecraft:slowness
-effect clear @a[nbt={Inventory:[{tag:{nonslow:1b}}]}] minecraft:speed
-effect give @a[nbt={SelectedItem:{tag:{nonslow:1b}}}] minecraft:speed 1 0 true
+effect clear @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{nonslow:1b}}}}] minecraft:slowness
+effect clear @a[nbt={Inventory:[{components:{"minecraft:custom_data":{nonslow:1b}}}]}] minecraft:speed
+effect give @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{nonslow:1b}}}}] minecraft:speed 1 0 true
 
 
 
 
 
 effect give @a minecraft:saturation 9999 0 true
-effect give @a[tag=start,team=Rg,nbt=!{SelectedItem:{tag:{Visclear:1b}}}] minecraft:invisibility 1 0 true
+effect give @a[tag=start,team=Rg,nbt=!{SelectedItem:{components:{"minecraft:custom_data":{Visclear:1b}}}}] minecraft:invisibility 1 0 true
 effect give @a[tag=start,team=Rg] minecraft:weakness 1 200 true
-execute at @a[tag=start,team=Rg,nbt={ActiveEffects:[{Id:14b}]},nbt={SelectedItem:{tag:{Visclear:1b}}}] run playsound minecraft:entity.ghast.ambient block @a
-effect clear @a[nbt={SelectedItem:{tag:{Visclear:1b}}}] minecraft:invisibility
-effect clear @a[nbt={SelectedItem:{tag:{Visclear:1b}}}] minecraft:weakness
+execute at @a[tag=start,team=Rg,nbt={active_effects:[{id:"minecraft:invisibility"}]},nbt={SelectedItem:{components:{"minecraft:custom_data":{Visclear:1b}}}}] run playsound minecraft:entity.ghast.ambient block @a
+effect clear @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{Visclear:1b}}}}] minecraft:invisibility
+effect clear @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{Visclear:1b}}}}] minecraft:weakness
 execute at @a[team=Gc] run effect give @a[team=Rg,distance=..5] minecraft:regeneration 3 0 true
 
 
-execute as @a[nbt={SelectedItem:{tag:{cai:1b}}},nbt=!{Inventory:[{tag:{cai:2b}}]}] run function soso:alltimeuse/cai
-execute as @a[nbt=!{SelectedItem:{tag:{cai:1b}}},nbt={Inventory:[{tag:{cai:2b}}]}] run function soso:alltimeuse/caiclear
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{cai:1b}}}},nbt=!{Inventory:[{components:{"minecraft:custom_data":{cai:2b}}}]}] run function soso:alltimeuse/cai
+execute as @a[nbt=!{SelectedItem:{components:{"minecraft:custom_data":{cai:1b}}}},nbt={Inventory:[{components:{"minecraft:custom_data":{cai:2b}}}]}] run function soso:alltimeuse/caiclear
 
 
 
@@ -90,7 +90,7 @@ execute as @a[scores={Hurt=60..}] if data entity @s Inventory[].tag{attup:1b} ru
 
 
 scoreboard players set gkillin zTEST 0
-execute if score diff zTEST matches 2.. if score gkill zTEST matches 1.. as @a[team=Rg,gamemode=adventure,nbt={ActiveEffects:[{Id:24}]}] at @s unless entity @e[type=minecraft:shulker,distance=..5] run function soso:alltimeuse/gkill
+execute if score diff zTEST matches 2.. if score gkill zTEST matches 1.. as @a[team=Rg,gamemode=adventure,nbt={active_effects:[{id:"minecraft:glowing"}]}] at @s unless entity @e[type=minecraft:shulker,distance=..5] run function soso:alltimeuse/gkill
 
 #give @p minecraft:white_banner{Nonknow:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護符\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退5秒，\"","\"放置於主手可緩慢恢復抵抗時間。\""]}}
 #give @p minecraft:white_banner{regeneration:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:6},{Pattern:mc,Color:6},{Pattern:tt,Color:6},{Pattern:mr,Color:6}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"恢復護符\",\"color\":\"gold\",\"bold\":\"true\"}]"}}
@@ -124,7 +124,7 @@ scoreboard players set @a dietest 0
 
 
 
-execute as @a[team=Rg] store result score @s crit3 run attribute @s minecraft:generic.attack_damage get 6
+execute as @a[team=Rg] store result score @s crit3 run attribute @s minecraft:attack_damage get 6
 
 execute as @a[team=Rg,scores={crit3=1..,crit=1..}] if score @s crit > @s crit3 run tag @s add crit
 execute as @a[team=Rg,scores={crit3=1..,crit=1..}] run tellraw @a {"score":{"name":"@s","objective":"crit"},"color":"yellow","bold":false}

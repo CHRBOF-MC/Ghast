@@ -1,4 +1,4 @@
-execute unless entity @e[tag=creeper,type=creeper] as @a[tag=creeper] at @s run summon minecraft:creeper ~ ~ ~ {Attributes:[{Name:"generic.attack_damage",Base:1}],Tags:["creeper"],Team:"Rg",ignited:1,PortalCooldown:30}
+execute unless entity @e[tag=creeper,type=creeper] as @a[tag=creeper] at @s run summon minecraft:creeper ~ ~ ~ {attributes:[{id:"attack_damage",base:1}],Tags:["creeper"],Team:"Rg",ignited:1,PortalCooldown:30}
 
 tag @a remove creeper
 

@@ -1,5 +1,5 @@
 kill @e[tag=flyback]
-summon minecraft:item ~ ~100 ~ {PickupDelay:40,Tags:["flyback"],Item:{id:"stone",Count:1b}}
+summon minecraft:item ~ ~100 ~ {PickupDelay:40,Tags:["flyback"],Item:{id:"stone",count:1}}
 data modify entity @e[tag=flyback,limit=1] Owner[0] set from entity @s Owner[0]
 
 execute store success score @s zTEST run data modify entity @e[tag=flyback,limit=1] Owner set from entity @p UUID
