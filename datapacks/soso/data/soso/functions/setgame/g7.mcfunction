@@ -1,0 +1,13 @@
+scoreboard players set @s[team=Rg] team 6
+
+tellraw @s [{"text":"嬉鬼─奔鬼","color":"yellow","bold":true}]
+tellraw @s [{"text":"武器(需手持才可發動攻擊)：持有可消除緩速，傷害0，擊退I。","color":"white","bold":true}]
+tellraw @s [{"text":"惡鬼招鬼2張：放置於副手可招喚殭屍進行輔助。","color":"white","bold":true}]
+tellraw @s [{"text":"兇鬼魔化1張：放置於副手獲得永久發光與十秒抗性X、速度V。(一次性)","color":"white","bold":true}]
+
+
+
+
+
+
+
