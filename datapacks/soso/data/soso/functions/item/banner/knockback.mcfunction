@@ -1,48 +1,55 @@
-#execute store result score @s zTEST run data get entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount 100
-#execute as @s[scores={zTEST=1..}] store result entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.01 run scoreboard players remove @s zTEST 25
-#execute if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-#execute if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-#execute if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} run title @s actionbar [{"text":"護符殘留","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
+#讀取
 
-#execute store result score @s zTEST run data get entity @s SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount 10
-#execute store result entity @s[scores={zTEST=..999}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute store result entity @s[scores={zTEST=..999}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute store result entity @s[scores={zTEST=..999,team=2}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute store result entity @s[scores={zTEST=..999,team=2}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute store result entity @s[scores={zTEST=..999,team=2}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute store result entity @s[scores={zTEST=..999,team=2}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute store result entity @s[scores={zTEST=..999,team=2}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute store result entity @s[scores={zTEST=..999,team=2}] SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-#execute if data entity @s SelectedItem.tag{Nonknow:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-#execute if data entity @s[scores={tasktalk=..0}] SelectedItem.tag{Nonknow:1b} run title @s actionbar [{"text":"護符填補","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
+execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} unless data entity @s SelectedItem.tag{Nonknow:1b} run tag @s add onA
+execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} if data entity @s SelectedItem.tag{Nonknow:1b} run tag @s add onS
+execute if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} unless data entity @s SelectedItem.tag{Nonknow:1b} run tag @s add onF
 
 
 
 
-execute store result score @s zTEST run data get entity @s Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount 10
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} if data entity @s SelectedItem.tag{Nonknow:1b} store result entity @s[scores={zTEST=..199}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} store result entity @s[scores={zTEST=..99}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} store result entity @s[scores={zTEST=..97,team=2}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 3
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} store result entity @s[scores={zTEST=..98,team=2}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 2
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} store result entity @s[scores={zTEST=..99,team=2}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} if data entity @s SelectedItem.tag{Nonknow:1b} store result entity @s[scores={zTEST=100..999}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} if data entity @s SelectedItem.tag{Nonknow:1b} store result entity @s[scores={zTEST=100..999}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} if data entity @s SelectedItem.tag{Nonknow:1b} store result entity @s[scores={zTEST=100..997,team=2}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 3
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} if data entity @s SelectedItem.tag{Nonknow:1b} store result entity @s[scores={zTEST=100..998,team=2}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 2
-execute unless data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} if data entity @s SelectedItem.tag{Nonknow:1b} store result entity @s[scores={zTEST=100..999,team=2}] Inventory[].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.1 run scoreboard players add @s zTEST 1
 
-execute store result score @s zTEST run data get entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount 100
-execute as @s[scores={zTEST=1..}] store result entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount double 0.01 run scoreboard players remove @s zTEST 25
-execute if score ghastweak zTEST matches 1 if score @s zTEST matches 500.. if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} at @s run effect give @a[team=Rg,distance=..5.5] minecraft:weakness 1 200 true
-execute if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-execute if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-execute if data entity @s Inventory[{Slot:-106b}].tag{Nonknow:1b} run title @s[scores={tasktalk=..0}] actionbar [{"text":"護符殘留","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
+#不在副手 不在主手
+scoreboard players add @s[tag=onA,scores={know=..1000}] know 10
 
 
-execute store result score @s zTEST run data get entity @s SelectedItem.tag{Nonknow:1b}.AttributeModifiers[{AttributeName:"generic.knockbackResistance"}].Amount 1
-execute if data entity @s[scores={tasktalk=..0}] SelectedItem.tag{Nonknow:1b} run title @s actionbar [{"text":"護符填補","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
+
+#在主手
+scoreboard players add @s[tag=onS,scores={know=..1970,team=2}] know 30
+scoreboard players add @s[tag=onS,scores={know=..1990}] know 10
+scoreboard players add @s[tag=onS,scores={team=2}] know 60
+scoreboard players add @s[tag=onS] know 20
 
 
+#在副手
+scoreboard players remove @s[tag=onF] know 25
+execute if score ghastweak zTEST matches 1 at @s[tag=onF,scores={know=1..}] run effect give @e[team=Rg,distance=..7] minecraft:weakness 1 0
+
+
+scoreboard players set @s[scores={know=..0}] know 0
+scoreboard players set @s[scores={know=10000..}] know 10000
+
+
+
+
+scoreboard players operation @s zTEST = @s know
+scoreboard players operation @s zTEST /= 10 zTEST
+scoreboard players operation @s zTEST /= 10 zTEST
+
+execute unless score shield zTEST matches 1 run replaceitem entity @s[tag=onF,scores={know=30..},tag=!knowon] weapon.offhand minecraft:white_banner{Nonknow:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護符\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退共20秒，\"","\"放置於主手可緩慢恢復抵抗時間。\"","\"自然填補率：10%。\""]}}
+execute if score shield zTEST matches 1 run replaceitem entity @s[tag=onF,scores={know=30..},tag=!knowon] weapon.offhand minecraft:shield{Unbreakable:1,Nonknow:1b,BlockEntityTag:{Base:0,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護盾\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退共20秒，\"","\"放置於主手可緩慢恢復抵抗時間。\"","\"自然填補率：10%。\""]}}
+tag @s[tag=onF,scores={know=30..}] add knowon
+
+execute unless score shield zTEST matches 1 run replaceitem entity @s[tag=onF,scores={know=..10},tag=knowon] weapon.offhand minecraft:white_banner{Nonknow:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護符\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退共20秒，\"","\"放置於主手可緩慢恢復抵抗時間。\"","\"自然填補率：10%。\""]}}
+execute if score shield zTEST matches 1 run replaceitem entity @s[tag=onF,scores={know=..10},tag=knowon] weapon.offhand minecraft:shield{Unbreakable:1,Nonknow:1b,BlockEntityTag:{Base:0,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護盾\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退共20秒，\"","\"放置於主手可緩慢恢復抵抗時間。\"","\"自然填補率：10%。\""]}}
+tag @s[tag=onF,scores={know=..10}] remove knowon
+
+
+title @s[tag=onF,scores={tasktalk=..0}] actionbar [{"text":"護符殘留","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
+title @s[tag=onS,scores={tasktalk=..0}] actionbar [{"text":"護符填補","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
+
+tag @s remove onA
+tag @s remove onS
+tag @s remove onF
 
 
 

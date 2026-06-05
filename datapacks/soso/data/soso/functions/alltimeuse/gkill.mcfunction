@@ -5,7 +5,9 @@ execute if score gkillin zTEST matches 0 if score gkill zTEST matches 1 run scor
 execute if score gkillin zTEST matches 0 if score gkill zTEST matches 2 run scoreboard players operation @s zTEST /= 4 zTEST
 execute if score gkillin zTEST matches 0 run scoreboard players operation @s zTEST /= 2 zTEST
 
-execute if score gkillin zTEST matches 0 if score @s tasktalk matches 3 if score @s zTEST matches 1.. align xyz run summon minecraft:firework_rocket ~0.5 ~5 ~0.5 {FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:0b,Colors:[I; 16711846]}]}}}}
+scoreboard players remove @s gkills 1
+scoreboard players set @s[scores={gkills=..0}] gkills 20
+execute if score gkillin zTEST matches 0 if score @s gkills matches 3 if score @s zTEST matches 1.. align xyz run summon minecraft:firework_rocket ~0.5 ~5 ~0.5 {FireworksItem:{id:"minecraft:firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:0b,Colors:[I; 16711846]}]}}}}
 execute if score gkillin zTEST matches 0 if score @s zTEST matches 1.. run title @a[scores={ghastnear=..5}] times 0 5 0
 execute if score gkillin zTEST matches 0 if score @s zTEST matches 1.. run title @a[scores={ghastnear=..5}] title [{"text":" ","color":"dark_red","bold":true}]
 execute if score gkillin zTEST matches 0 if score @s zTEST matches 1.. run title @a[scores={ghastnear=..5}] subtitle [{"text":"魔鬼陣封：","color":"dark_red","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"white","bold":false},{"text":"%","color":"dark_red","bold":false}]

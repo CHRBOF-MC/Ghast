@@ -25,9 +25,9 @@ execute as @a if data entity @s Inventory[{Slot:-106b}].tag{pos:1b} run function
 scoreboard players set @a zTEST 0
 #execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{zombie:1b} unless entity @e[type=minecraft:zombie,distance=..20] store result score @s zTEST run replaceitem entity @s weapon.offhand air
 execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{zombie:1b} store result score @s zTEST run replaceitem entity @s weapon.offhand air
-execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attackDamage",Base:1}]}
-execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attackDamage",Base:1}]}
-execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attackDamage",Base:1}]}
+execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attack_damage",Base:1}]}
+execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attack_damage",Base:1}]}
+execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attack_damage",Base:1}]}
 
 scoreboard players set @a zTEST 0
 execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{glow:1b} run effect give @s minecraft:glowing 999999 1

@@ -3,7 +3,7 @@ scoreboard players add time visitmode 1
 execute if score time visitmode matches 20.. run function soso:alltimeuse/t1
 
 
-scoreboard players set @a[scores={tasktalk=..-10},team=Rg] tasktalk 10
+#scoreboard players set @a[scores={tasktalk=..-10}] tasktalk 10
 
 execute as @a[gamemode=survival] run function soso:alltimeuse/suv
 execute as @a[gamemode=!creative,gamemode=!spectator] at @s if block ~ ~ ~ minecraft:cave_air run tellraw @s [{"text":"你無權進入操作室","color":"yellow","bold":true}]
@@ -17,7 +17,7 @@ execute as @a[tag=hpend] run function soso:item/tagclear
 gamemode spectator @a[tag=hpend]
 tag @a[tag=hpend] remove hpend
 
-execute as @a[team=Rg,gamemode=adventure,scores={hp=..0},tag=start] at @s run function soso:skill/die/skill
+execute as @a[team=Rg,gamemode=adventure,scores={dietest=1..},tag=start] at @s run function soso:skill/die/skill
 tag @a[gamemode=adventure,scores={dietest=1..},tag=start] add hpend
 effect give @a[tag=hpend] minecraft:instant_health 1 200 true
 effect clear @a[tag=hpend]
@@ -34,32 +34,10 @@ execute if score look zTEST matches 1 run title @a[team=Gc,scores={ghastnear=10}
 
 
 
-effect clear @a[team=Rg] minecraft:levitation
-execute as @a store result score @s zTEST run data get entity @s Inventory[{Slot:-106b}].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount 10
-execute as @a unless score @s zTEST matches ..1 store result entity @s Inventory[{Slot:-106b}].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players remove @s zTEST 1
-execute as @a unless score @s zTEST matches ..1 store result entity @s Inventory[{Slot:-106b}].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players remove @s zTEST 1
-execute as @a if score @s zTEST matches 1 store result entity @s Inventory[{Slot:-106b}].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players set @s zTEST -1000
-execute as @a if score @s zTEST matches 1.. run effect give @s minecraft:levitation 1 255
-execute as @a if data entity @s Inventory[{Slot:-106b}].tag{fly:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-execute as @a if data entity @s Inventory[{Slot:-106b}].tag{fly:1b} run title @s actionbar [{"text":"怨力殘留","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
-execute as @a store result score @s zTEST run data get entity @s SelectedItem.tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount 10
-execute as @a unless score @s zTEST matches ..1 store result entity @s SelectedItem.tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players remove @s zTEST 1
-execute as @a unless score @s zTEST matches ..1 store result entity @s SelectedItem.tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players remove @s zTEST 1
-execute as @a unless score @s zTEST matches ..1 store result entity @s SelectedItem.tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players remove @s zTEST 1
-execute as @a unless score @s zTEST matches ..1 store result entity @s SelectedItem.tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players remove @s zTEST 1
-execute as @a if score @s zTEST matches 1 store result entity @s SelectedItem.tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.1 run scoreboard players set @s zTEST -1000
-execute as @a if score @s zTEST matches 1.. run effect give @s minecraft:levitation 1 4
-execute as @a if data entity @s SelectedItem.tag{fly:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-execute as @a[scores={task=0}] if data entity @s SelectedItem.tag{fly:1b} run title @s actionbar [{"text":"怨力殘留","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
 
-execute as @a store result score @s zTEST run data get entity @s Inventory[].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount 20
-execute as @a unless score @s zTEST matches -1.. store result entity @s Inventory[].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.05 run scoreboard players add @s zTEST 1
-execute as @a unless score @s zTEST matches -1.. store result entity @s Inventory[].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.05 run scoreboard players add @s zTEST 1
-execute as @a if score @s zTEST matches -1 store result entity @s Inventory[].tag{fly:1b}.AttributeModifiers[{AttributeName:"飛行"}].Amount double 0.05 run scoreboard players set @s zTEST 2000
-execute as @a if data entity @s Inventory[].tag{fly:1b} run scoreboard players operation @s zTEST /= 10 zTEST
-execute as @a if data entity @s Inventory[].tag{fly:1b} run scoreboard players operation @s zTEST /= 2 zTEST
-execute as @a if data entity @s Inventory[].tag{fly:1b} run scoreboard players add @s zTEST 100
-execute as @a if score @s zTEST matches 1..99 if data entity @s Inventory[].tag{fly:1b} run title @s actionbar [{"text":"怨力填補","color":"yellow","bold":true},{"score":{"name":"@s","objective":"zTEST"},"color":"yellow","bold":true},{"text":"%","color":"yellow","bold":true}]
+
+
+execute as @a if data entity @s Inventory[].tag{fly:1b} run function soso:item/banner/fly
 
 
 
@@ -121,8 +99,8 @@ execute as @a[scores={Hurt=60..}] if data entity @s Inventory[].tag{attup:1b} ru
 scoreboard players set gkillin zTEST 0
 execute if score diff zTEST matches 2.. if score gkill zTEST matches 1.. as @a[team=Rg,gamemode=adventure,nbt={ActiveEffects:[{Id:24b}]}] at @s unless entity @e[type=minecraft:shulker,distance=..5] run function soso:alltimeuse/gkill
 
-#give @p minecraft:white_banner{Nonknow:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},AttributeModifiers:[{AttributeName:"generic.knockbackResistance",Name:"generic.knockbackResistance",Amount:100.0d,Operation:0,UUIDMost:46351,UUIDLeast:170121,Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護符\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退5秒，\"","\"放置於主手可緩慢恢復抵抗時間。\""]}}
-#give @p minecraft:white_banner{regeneration:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:6},{Pattern:mc,Color:6},{Pattern:tt,Color:6},{Pattern:mr,Color:6}]},AttributeModifiers:[{AttributeName:"generic.knockbackResistance",Name:"generic.knockbackResistance",Amount:100.0d,Operation:0,UUIDMost:46351,UUIDLeast:170121,Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"恢復護符\",\"color\":\"gold\",\"bold\":\"true\"}]"}}
+#give @p minecraft:white_banner{Nonknow:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護符\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退5秒，\"","\"放置於主手可緩慢恢復抵抗時間。\""]}}
+#give @p minecraft:white_banner{regeneration:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:6},{Pattern:mc,Color:6},{Pattern:tt,Color:6},{Pattern:mr,Color:6}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"恢復護符\",\"color\":\"gold\",\"bold\":\"true\"}]"}}
 
 
 execute as @p[gamemode=!spectator,tag=!start] run function soso:alltimeuse/nonstart

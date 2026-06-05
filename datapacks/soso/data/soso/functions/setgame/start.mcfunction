@@ -13,6 +13,14 @@ execute as @a[team=Rg,scores={team=10}] run function soso:item/ghast11
 execute if score pos zTEST matches 1 run forceload add 50 93 -50 222
 execute if score pos zTEST matches 2 run forceload add 51 36 -51 -35
 
+
+scoreboard players set @a fly 10000
+scoreboard players set @a speed 10000
+scoreboard players set @a zombiesum 10000
+scoreboard players set @a slowdown 10000
+scoreboard players set @a know 10000
+
+
 scoreboard players operation worldcore zTEST = worldcore core
 scoreboard players reset * core
 execute store result score worldcore core store result score @a core run scoreboard players add worldcore zTEST 1

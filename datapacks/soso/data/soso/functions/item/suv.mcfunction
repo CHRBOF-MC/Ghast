@@ -1,3 +1,8 @@
+scoreboard players set @s fly 10000
+scoreboard players set @s speed 10000
+scoreboard players set @s zombiesum 10000
+scoreboard players set @s slowdown 10000
+scoreboard players set @s know 10000
 
 function soso:item/tagclear
 effect clear @s
