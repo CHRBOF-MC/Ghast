@@ -1,5 +1,5 @@
 tag @s add creeper
-replaceitem entity @s weapon.offhand minecraft:air
+item replace entity @s weapon.offhand with minecraft:air
 function soso:skill/creeperb
 
 

@@ -3,7 +3,7 @@ gamemode adventure @a[tag=sum]
 execute if score pos zTEST matches 0 run tp @a[tag=sum] 0 110 -38
 execute if score pos zTEST matches 1 run tp @a[tag=sum] 0 103 94 0 ~
 execute if score pos zTEST matches 2 run tp @a[tag=sum] -5 130.06 21 180 ~
-
+execute if score pos zTEST matches 3 run tp @a[tag=sum] 39.63 84.00 32.43 90 ~
 function soso:alltimeuse/ramdon
 execute if score ramdon zTEST matches 0 as @a[tag=sum] run function soso:item/ghast1
 execute if score ramdon zTEST matches 1 as @a[tag=sum] run function soso:item/ghast2

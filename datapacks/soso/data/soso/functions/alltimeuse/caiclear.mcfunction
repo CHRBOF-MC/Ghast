@@ -1,7 +1,7 @@
-replaceitem entity @s armor.chest air
-replaceitem entity @s armor.feet air
-replaceitem entity @s armor.head air
-replaceitem entity @s armor.legs air
+item replace entity @s armor.chest with air
+item replace entity @s armor.feet with air
+item replace entity @s armor.head with air
+item replace entity @s armor.legs with air
 
 
 

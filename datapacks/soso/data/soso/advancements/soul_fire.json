@@ -1,0 +1,32 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "岩漿弱化",
+            "color": "gold",
+            "bold": true
+        },
+        "description": {
+            "text": "泡岩漿可抗火。"
+        },
+        "icon": {
+            "item": "minecraft:command_block"
+        },
+        "frame": "challenge",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "event28": {
+            "trigger": "minecraft:enter_block",
+            "conditions": {
+                "block": "minecraft:soul_fire"
+            }
+        }
+    },
+    "rewards": {
+        "function": "soso:lava"
+    },
+    "parent": "soso:rootb"
+}

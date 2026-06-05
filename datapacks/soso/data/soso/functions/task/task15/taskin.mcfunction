@@ -22,4 +22,4 @@ title @a[scores={task=15}] actionbar ["",{"text":"踩在綠寶石磚上給予鬼
 execute at @e[tag=task] run scoreboard players set @a[distance=..10,scores={tasktalk=..-10}] tasktalk 10
 execute if score Gc task15 matches 100.. run function soso:task/task15/taskend
 
-execute as @e[name=task15] run schedule function soso:task/task15/taskin 1t
+execute as @e[tag=task15] run schedule function soso:task/task15/taskin 1t

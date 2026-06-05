@@ -24,4 +24,4 @@ title @a[scores={task=4}] actionbar ["",{"text":"在綠寶石磚上連續跳躍�
 
 execute if score Gc task4 matches 100.. run function soso:task/task4/taskend
 
-execute as @e[name=task4] run schedule function soso:task/task4/taskin 1t
+execute as @e[tag=task4] run schedule function soso:task/task4/taskin 1t

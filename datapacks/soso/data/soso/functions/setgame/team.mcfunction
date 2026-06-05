@@ -122,29 +122,65 @@ execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
 
 
+
+
 scoreboard players operation teamram zTEST = peo zTEST
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
-execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @r[team=Rg]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @r[team=Rg] add teamjoin
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run team join Gc @p[tag=teamjoin]
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players set @p[tag=teamjoin] team 0
+execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run tag @p[tag=teamjoin] remove teamjoin
 execute if score team zTEST matches 1 if score teamram zTEST matches 1.. run scoreboard players remove teamram zTEST 1
+
 
 
 

@@ -17,4 +17,4 @@ execute at @e[tag=task7] if score Gc task7 matches ..99 run fill ~ ~1 ~ ~ ~1 ~ m
 execute at @e[tag=task] run scoreboard players set @a[distance=..10,scores={tasktalk=..-10}] tasktalk 10
 execute if score Gc task7 matches 100.. run function soso:task/task7/taskend
 
-execute as @e[name=task7] run schedule function soso:task/task7/taskin 1t
+execute as @e[tag=task7] run schedule function soso:task/task7/taskin 1t

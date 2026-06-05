@@ -12,14 +12,14 @@ execute as @a[team=Rg,scores={team=9}] run function soso:item/ghast10
 execute as @a[team=Rg,scores={team=10}] run function soso:item/ghast11
 execute if score pos zTEST matches 1 run forceload add 50 93 -50 222
 execute if score pos zTEST matches 2 run forceload add 51 36 -51 -35
-
-
+forceload add 49 200 -49 92
+forceload add 75 70 -92 -92
 scoreboard players set @a fly 10000
 scoreboard players set @a speed 10000
 scoreboard players set @a zombiesum 10000
 scoreboard players set @a slowdown 10000
 scoreboard players set @a know 10000
-
+scoreboard players reset * crit2
 
 scoreboard players operation worldcore zTEST = worldcore core
 scoreboard players reset * core
@@ -29,6 +29,7 @@ scoreboard players set @a gkill 0
 function soso:stay/reset
 function soso:sand/reset
 function soso:dinner/reset
+function soso:head/reset
 kill @e[type=minecraft:zombie]
 gamemode adventure @a
 gamemode spectator @a[team=spc]
@@ -43,6 +44,8 @@ execute if score pos zTEST matches 1 run tp @a 0 103 94 0 ~
 execute if score pos zTEST matches 1 positioned 0 103 94 run playsound minecraft:block.end_portal.spawn block @a
 execute if score pos zTEST matches 2 run tp @a -5 130.06 21 180 ~
 execute if score pos zTEST matches 2 positioned -5 130.06 21 run playsound minecraft:block.end_portal.spawn block @a
+execute if score pos zTEST matches 3 run tp @a 39.63 84.00 32.43 90 ~
+execute if score pos zTEST matches 3 positioned 39.63 84.00 32.43 run playsound minecraft:block.end_portal.spawn block @a
 title @a times 20 40 0
 title @a title [{"text":"詭","color":"yellow","bold":true}]
 title @a subtitle [{"text":"遊戲開始！","color":"yellow","bold":true}]
@@ -56,10 +59,6 @@ tellraw @a[team=Gc] [{"text":"前往受暗黑魔力抑制的據點，解放六�
 tellraw @a[team=Rg] [{"text":"阻止道士前王暗黑魔力抑制的據點解放六芒星法力！","color":"yellow","bold":true}]
 
 scoreboard players set @a ghastnear 100
-
-
-
-forceload remove all
 
 
 

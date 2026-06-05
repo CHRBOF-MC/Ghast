@@ -34,22 +34,42 @@ execute if score pos zTEST matches 2 if score diff zTEST matches 2.. run execute
 execute if score pos zTEST matches 2 if score diff zTEST matches 2.. run execute positioned 26 137 -9 run function soso:task/tasksummon
 
 
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
-execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,team=spc,limit=1,sort=random]
+execute if score pos zTEST matches 3 run kill @e[type=minecraft:shulker,team=spc]
+execute if score pos zTEST matches 3 positioned -6 88 25 run function soso:task/tasksummon
+execute if score pos zTEST matches 3 positioned -34 66 15 run function soso:task/tasksummon
+execute if score pos zTEST matches 3 positioned 2 58 30 run function soso:task/tasksummon
+execute if score pos zTEST matches 3 positioned 17 48 21 run function soso:task/tasksummon
+execute if score pos zTEST matches 3 positioned -25 31 27 run function soso:task/tasksummon
+execute if score pos zTEST matches 3 positioned -13 44 -40 run function soso:task/tasksummon
+execute if score pos zTEST matches 3 if score diff zTEST matches 2.. run execute positioned 12 71 23 run function soso:task/tasksummon
+execute if score pos zTEST matches 3 if score diff zTEST matches 2.. run execute positioned 15 54 -17 run function soso:task/tasksummon
+
+
+
+
+
+
+
+
+
+
+
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker]
+execute if score 據點殘留 skyway > num zTEST run kill @e[type=minecraft:shulker,limit=1,sort=random]
 

@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "求生意志",
+            "color": "gold",
+            "bold": true
+        },
+        "description": {
+            "text": "參加神秘地圖"
+        },
+        "icon": {
+            "item": "minecraft:diamond"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "criteria": {
+        "zombie": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

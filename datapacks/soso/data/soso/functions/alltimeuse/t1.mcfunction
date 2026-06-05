@@ -5,7 +5,7 @@ scoreboard players add time time 1
 execute store result score 遊玩人數 skyway if entity @a[team=!spc]
 execute store result score 嬉鬼數量 skyway if entity @a[team=Rg]
 execute store result score 道士人數 skyway if entity @a[team=Gc]
-execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,team=spc]
+execute store result score 據點殘留 skyway if entity @e[type=minecraft:shulker,tag=task]
 
 
 kill @e[type=minecraft:drowned]
@@ -16,15 +16,15 @@ effect give @a[tag=start,team=Rg] minecraft:jump_boost 2 1 true
 
 execute as @a if data entity @s Inventory[{Slot:-106b}].tag{regeneration:1b} run effect give @s minecraft:regeneration 10 1
 execute as @a if data entity @s Inventory[{Slot:-106b}].tag{regeneration:1b} run effect give @s minecraft:absorption 10 3
-execute as @a if data entity @s Inventory[{Slot:-106b}].tag{regeneration:1b} run replaceitem entity @s weapon.offhand air
+execute as @a if data entity @s Inventory[{Slot:-106b}].tag{regeneration:1b} run item replace entity @s weapon.offhand with air
 
 execute as @a if data entity @s Inventory[{Slot:-106b}].tag{pos:1b} run function soso:item/banner/tp
 
 
 
 scoreboard players set @a zTEST 0
-#execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{zombie:1b} unless entity @e[type=minecraft:zombie,distance=..20] store result score @s zTEST run replaceitem entity @s weapon.offhand air
-execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{zombie:1b} store result score @s zTEST run replaceitem entity @s weapon.offhand air
+#execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{zombie:1b} unless entity @e[type=minecraft:zombie,distance=..20] store result score @s zTEST run item replace entity @s weapon.offhand with air
+execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{zombie:1b} store result score @s zTEST run item replace entity @s weapon.offhand with air
 execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attack_damage",Base:1}]}
 execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attack_damage",Base:1}]}
 execute as @a at @s if score @s zTEST matches 1.. run summon zombie ~ ~ ~ {IsBaby:1,Team:"Rg",Attributes:[{Name:"generic.attack_damage",Base:1}]}
@@ -33,7 +33,7 @@ scoreboard players set @a zTEST 0
 execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{glow:1b} run effect give @s minecraft:glowing 999999 1
 execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{glow:1b} run effect give @s minecraft:resistance 10 10
 execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{glow:1b} run effect give @s minecraft:speed 10 4
-execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{glow:1b} run replaceitem entity @s weapon.offhand air
+execute as @a at @s if data entity @s Inventory[{Slot:-106b}].tag{glow:1b} run item replace entity @s weapon.offhand with air
 
 
 

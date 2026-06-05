@@ -23,7 +23,7 @@ effect give @a[tag=hpend] minecraft:instant_health 1 200 true
 effect clear @a[tag=hpend]
 
 execute as @a if data entity @s Inventory[{Slot:-106b}].tag{raggo:1b} at @s run function soso:skill/ravager
-execute as @a if data entity @s Inventory[{Slot:-106b}].tag{raggo:1b} run replaceitem entity @s weapon.offhand air
+execute as @a if data entity @s Inventory[{Slot:-106b}].tag{raggo:1b} run item replace entity @s weapon.offhand with air
 
 scoreboard players remove @a[scores={ghastnear=1..}] ghastnear 1
 scoreboard players remove @a[scores={ghastnear=11}] ghastnear 2
@@ -58,15 +58,8 @@ effect clear @a[nbt={Inventory:[{tag:{nonslow:1b}}]}] minecraft:speed
 effect give @a[nbt={SelectedItem:{tag:{nonslow:1b}}}] minecraft:speed 1 0 true
 
 
-#execute at @e[type=minecraft:vex,name=end] run fill ~ ~ ~ ~ ~ ~ minecraft:end_gateway
-#execute at @e[type=minecraft:vex,name=birch] run fill ~ ~ ~ ~ ~5 ~ minecraft:birch_planks
-#execute at @e[type=minecraft:vex,name=air] run fill ~ ~ ~ ~ ~5 ~ minecraft:air
-#execute at @e[type=minecraft:vex,name=dark] run fill ~ ~ ~ ~ ~5 ~ minecraft:dark_oak_wood
-#execute at @e[type=minecraft:vex,name=glass] run fill ~ ~ ~ ~ ~3 ~ minecraft:glass_pane[north=true,south=true]
-#execute at @e[type=minecraft:vex,name=glass] run fill ~ ~1 ~-1 ~ ~2 ~-1 minecraft:glass_pane[north=true,south=true]
-#execute at @e[type=minecraft:vex,name=glass] run fill ~ ~1 ~1 ~ ~2 ~1 minecraft:glass_pane[north=true,south=true]
-#execute at @e[type=minecraft:vex,name=copy] run clone ~-5 ~-7 ~ ~5 ~-1 ~ ~-5 ~ ~
-#kill @e[type=minecraft:vex]
+
+
 
 effect give @a minecraft:saturation 9999 0 true
 effect give @a[tag=start,team=Rg,nbt=!{SelectedItem:{tag:{Visclear:1b}}}] minecraft:invisibility 1 0 true
@@ -116,11 +109,41 @@ scoreboard players set @a sneak 0
 
 schedule function soso:alltimeuse/alltimeuse 1t
 
-
+execute at @a[tag=expboo] at @e[distance=..20,type=minecraft:experience_orb,limit=1] run summon minecraft:tnt
+execute at @a[tag=expboo] as @e[distance=..20,type=minecraft:experience_orb] run kill @s
 
 
 
 scoreboard players set @a dietest 0
+
+
+
+
+#execute as @a[team=Rg,nbt={OnGround:0b},gamemode=adventure] at @s if entity @p[team=Gc,distance=..5] run effect give @s minecraft:blindness 1 0 true
+#execute as @a[team=Rg,nbt={OnGround:1b},gamemode=adventure] at @s if entity @p[team=Gc,distance=..5] run effect clear @s minecraft:blindness
+
+
+
+execute as @a[team=Rg] store result score @s crit3 run attribute @s minecraft:generic.attack_damage get 6
+
+execute as @a[team=Rg,scores={crit3=1..,crit=1..}] if score @s crit > @s crit3 run tag @s add crit
+execute as @a[team=Rg,scores={crit3=1..,crit=1..}] run tellraw @a {"score":{"name":"@s","objective":"crit"},"color":"yellow","bold":false}
+execute as @a[tag=crit] run scoreboard players operation @s crit -= @s crit3
+execute as @a[tag=crit] run tellraw @a {"score":{"name":"@s","objective":"crit"},"color":"yellow","bold":false}
+execute as @a[tag=crit] at @s run scoreboard players operation @p[team=Gc] crit2 += @s crit
+execute as @a[team=Gc,scores={crit2=40..}] run effect give @s minecraft:instant_health 1 0 true
+execute as @a[team=Gc,scores={crit2=40..}] run scoreboard players remove @s crit2 40
+scoreboard players set @a crit 0
+tag @a remove crit
+
+execute as @a[tag=waterneed,tag=!infire] at @s if block ~ ~ ~ air unless block ~ ~-1 ~ minecraft:lava unless block ~1 ~ ~ minecraft:lava unless block ~-1 ~ ~ minecraft:lava unless block ~ ~ ~1 minecraft:lava unless block ~ ~ ~-1 minecraft:lava run function soso:fireno
+execute at @e[tag=airback,scores={crit=1}] run fill ~ ~ ~ ~ ~ ~ minecraft:air
+kill @e[tag=airback,scores={crit=1}]
+scoreboard players add @e[tag=airback] crit 1
+tag @a remove infire
+
+
+
 
 
 

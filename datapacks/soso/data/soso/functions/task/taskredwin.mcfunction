@@ -4,9 +4,9 @@ execute as @s[scores={ramdon=0}] as @a[team=RED] run scoreboard players add 紅�
 execute as @s[scores={ramdon=1}] run tellraw @a ["",{"text":"紅隊完成委託敵隊資金隨人數扣除300元。","color":"red","bold":true}]
 execute as @s[scores={ramdon=1}] as @a[team=BLUE] run scoreboard players add 藍隊倉庫 skyway 300
 execute as @s[scores={ramdon=2}] run tellraw @a ["",{"text":"紅隊完成委託神獸血量提升50點。","color":"red","bold":true}]
-execute as @s[scores={ramdon=2}] run execute store result entity @e[limit=1,name="烈火聖獸"] Health double 0.1 run scoreboard players add 烈火聖獸 skyway 50
+execute as @s[scores={ramdon=2}] run execute store result entity @e[limit=1,tag="烈火聖獸"] Health double 0.1 run scoreboard players add 烈火聖獸 skyway 50
 execute as @s[scores={ramdon=3}] run tellraw @a ["",{"text":"紅隊完成委託藍隊神獸血量降低50點。","color":"red","bold":true}]
-execute as @s[scores={ramdon=3}] run execute store result entity @e[limit=1,name="寒冰聖獸"] Health double 0.1 run scoreboard players remove 寒冰聖獸 skyway 50
+execute as @s[scores={ramdon=3}] run execute store result entity @e[limit=1,tag="寒冰聖獸"] Health double 0.1 run scoreboard players remove 寒冰聖獸 skyway 50
 execute as @s[scores={ramdon=4}] run tellraw @a ["",{"text":"紅隊完成委託獲得狀態提升BUFF。","color":"red","bold":true}]
 execute as @s[scores={ramdon=4}] run effect give @a[team=RED] minecraft:strength 30 0
 execute as @s[scores={ramdon=4}] run effect give @a[team=RED] minecraft:speed 30 0
@@ -23,7 +23,7 @@ execute as @s[scores={ramdon=9}] run tellraw @a ["",{"text":"紅隊完成委託�
 execute as @s[scores={ramdon=9}] run scoreboard players add @a[team=BLUE] prof 20
 
 execute as @s[scores={ramdon=10}] run tellraw @a ["",{"text":"紅隊完成委託藍隊遺願大幅下降。","color":"red","bold":true}]
-execute as @s[scores={ramdon=10}] run scoreboard players operation @e[team=BLUE,name="戰場遺願"] BUY /= 2 zTEST
+execute as @s[scores={ramdon=10}] run scoreboard players operation @e[team=BLUE,tag="戰場遺願"] BUY /= 2 zTEST
 execute as @s[scores={ramdon=10}] run function soso:alltimeuse/desire
 
 execute as @s[scores={ramdon=11}] run tag @r[team=BLUE,limit=3] add clean

@@ -5,6 +5,7 @@ gamemode spectator @a[team=spc]
 execute if score pos zTEST matches 0 if score breakstay zTEST matches 0 if score 據點殘留 skyway matches 0 run function soso:endgame/star
 execute if score pos zTEST matches 1 if score breakstay zTEST matches 0 if score 據點殘留 skyway matches 0 run function soso:endgame/sand
 execute if score pos zTEST matches 2 if score breakstay zTEST matches 0 if score 據點殘留 skyway matches 0 run function soso:endgame/dinner
+execute if score pos zTEST matches 3 if score breakstay zTEST matches 0 if score 據點殘留 skyway matches 0 run function soso:endgame/head
 
 
 scoreboard players set end zTEST 0
@@ -20,6 +21,11 @@ execute as @a[team=Gc] at @s if block ~ ~-0.1 ~ minecraft:black_concrete run tel
 execute as @a[team=Gc] at @s if block ~ ~-0.1 ~ minecraft:black_concrete run tellraw @a [{"text":"恭喜","color":"yellow","bold":true},{"selector":"@a[team=Gc]","color":"yellow","bold":false},{"text":"堅強的存活了下來！","color":"yellow","bold":true}]
 execute as @a[team=Gc] at @s if block ~ ~-0.1 ~ minecraft:black_concrete run scoreboard players set end zTEST 1
 
+execute as @a[team=Gc] at @s if block ~ ~-1.1 ~ minecraft:black_concrete run title @a times 30 200 0
+execute as @a[team=Gc] at @s if block ~ ~-1.1 ~ minecraft:black_concrete run title @a title {"text":"成功逃脫，道士勝利！","color":"green","bold":true}
+execute as @a[team=Gc] at @s if block ~ ~-1.1 ~ minecraft:black_concrete run tellraw @a [{"text":"道士勝利!","color":"green","bold":true}]
+execute as @a[team=Gc] at @s if block ~ ~-1.1 ~ minecraft:black_concrete run tellraw @a [{"text":"恭喜","color":"yellow","bold":true},{"selector":"@a[team=Gc]","color":"yellow","bold":false},{"text":"堅強的存活了下來！","color":"yellow","bold":true}]
+execute as @a[team=Gc] at @s if block ~ ~-1.1 ~ minecraft:black_concrete run scoreboard players set end zTEST 1
 
 
 
