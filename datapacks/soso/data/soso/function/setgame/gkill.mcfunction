@@ -1,9 +1,9 @@
 scoreboard players add gkill zTEST 1
 
 execute if score gkill zTEST matches 3 run scoreboard players set gkill zTEST 0
-execute if score gkill zTEST matches 0 run data merge block ~ ~ ~ {Text2:"{\"text\":\"關閉\",\"color\":\"white\",\"bold\":true}"}
-execute if score gkill zTEST matches 1 run data merge block ~ ~ ~ {Text2:"{\"text\":\"開啟\",\"color\":\"white\",\"bold\":true}"}
-execute if score gkill zTEST matches 2 run data merge block ~ ~ ~ {Text2:"{\"text\":\"煉獄\",\"color\":\"white\",\"bold\":true}"}
+execute if score gkill zTEST matches 0 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"關閉","color":"white","bold":true}
+execute if score gkill zTEST matches 1 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"開啟","color":"white","bold":true}
+execute if score gkill zTEST matches 2 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"煉獄","color":"white","bold":true}
 
 
 

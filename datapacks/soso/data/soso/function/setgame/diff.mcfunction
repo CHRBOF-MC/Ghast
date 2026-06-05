@@ -2,9 +2,9 @@ scoreboard players add diff zTEST 1
 scoreboard players set @a team 0
 team leave @a
 execute if score diff zTEST matches 3 run scoreboard players set diff zTEST 0
-execute if score diff zTEST matches 0 run data merge block ~ ~ ~ {Text2:"{\"text\":\"簡單\",\"color\":\"white\",\"bold\":true}"}
-execute if score diff zTEST matches 1 run data merge block ~ ~ ~ {Text2:"{\"text\":\"普通\",\"color\":\"white\",\"bold\":true}"}
-execute if score diff zTEST matches 2 run data merge block ~ ~ ~ {Text2:"{\"text\":\"困難\",\"color\":\"white\",\"bold\":true}"}
+execute if score diff zTEST matches 0 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"簡單","color":"white","bold":true}
+execute if score diff zTEST matches 1 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"普通","color":"white","bold":true}
+execute if score diff zTEST matches 2 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"困難","color":"white","bold":true}
 playsound minecraft:block.stone_button.click_on block @a
 
 execute if score num zTEST matches 7.. run scoreboard players set num zTEST 6

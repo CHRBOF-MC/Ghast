@@ -1,9 +1,9 @@
 scoreboard players add gsum zTEST 1
 
 execute if score gsum zTEST matches 3 run scoreboard players set gsum zTEST 0
-execute if score gsum zTEST matches 0 run data merge block ~ ~ ~ {Text2:"{\"text\":\"關閉\",\"color\":\"white\",\"bold\":true}"}
-execute if score gsum zTEST matches 1 run data merge block ~ ~ ~ {Text2:"{\"text\":\"開啟\",\"color\":\"white\",\"bold\":true}"}
-execute if score gsum zTEST matches 2 run data merge block ~ ~ ~ {Text2:"{\"text\":\"雙倍\",\"color\":\"white\",\"bold\":true}"}
+execute if score gsum zTEST matches 0 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"關閉","color":"white","bold":true}
+execute if score gsum zTEST matches 1 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"開啟","color":"white","bold":true}
+execute if score gsum zTEST matches 2 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"雙倍","color":"white","bold":true}
 
 
 

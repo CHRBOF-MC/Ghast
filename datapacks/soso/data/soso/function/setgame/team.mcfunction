@@ -5,8 +5,8 @@ execute if score team zTEST matches 1 if entity @s[scores={sneak=1..}] run title
 execute if score team zTEST matches 1 if entity @s[scores={sneak=1..}] run title @s subtitle [{"text":"再度隨機分隊","color":"gold","bold":true}]
 
 execute if score team zTEST matches 2 run scoreboard players set team zTEST 0
-execute if score team zTEST matches 0 run data merge block ~ ~ ~ {Text2:"{\"text\":\"自選\",\"color\":\"white\",\"bold\":true}"}
-execute if score team zTEST matches 1 run data merge block ~ ~ ~ {Text2:"{\"text\":\"隨機\",\"color\":\"white\",\"bold\":true}"}
+execute if score team zTEST matches 0 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"自選","color":"white","bold":true}
+execute if score team zTEST matches 1 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"隨機","color":"white","bold":true}
 execute if score team zTEST matches 1 run title @s actionbar [{"text":"蹲下可再度隨機分隊","color":"black","bold":true}]
 playsound minecraft:block.stone_button.click_on block @a
 

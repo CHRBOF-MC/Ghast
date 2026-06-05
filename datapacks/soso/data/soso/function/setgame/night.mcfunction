@@ -1,9 +1,9 @@
 scoreboard players add night zTEST 1
 
 execute if score night zTEST matches 2 run scoreboard players set night zTEST 0
-execute if score night zTEST matches 0 run data merge block ~ ~ ~ {Text2:"{\"text\":\"關閉\",\"color\":\"white\",\"bold\":true}"}
+execute if score night zTEST matches 0 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"關閉","color":"white","bold":true}
 execute if score night zTEST matches 0 run effect clear @a minecraft:night_vision
-execute if score night zTEST matches 1 run data merge block ~ ~ ~ {Text2:"{\"text\":\"開啟\",\"color\":\"white\",\"bold\":true}"}
+execute if score night zTEST matches 1 run data modify block ~ ~ ~ front_text.messages[1] set value {"text":"開啟","color":"white","bold":true}
 
 
 
