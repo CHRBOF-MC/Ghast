@@ -26,15 +26,15 @@ scoreboard players set sea zTEST 0
 execute as @a at @s if block ~ ~ ~ minecraft:red_carpet run scoreboard players set sea zTEST 1
 
 execute if score sea zTEST matches 1.. unless entity @e[name=" hi_book "] run playsound minecraft:ambient.cave block @a 0 103 -92
-execute if score sea zTEST matches 1.. unless entity @e[name=" hi_book "] run summon armor_stand 0 103 -92 {Rotation:[180f],Invulnerable:1b,PersistenceRequired:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{id:"leather_boots",count:1,components:{"minecraft:dyed_color":0}},{id:"leather_leggings",count:1,components:{"minecraft:dyed_color":0}},{id:"leather_chestplate",count:1,components:{"minecraft:dyed_color":0}},{id:"player_head",count:1,components:{"minecraft:profile":"hi_book"}}],HandItems:[{id:"redstone_torch",count:1},{}],CustomName:"{\"text\":\" hi_book \",\"color\":\"black\",\"bold\":\"true\"}",CustomNameVisible:1b,DisabledSlots:2039583,Pose:{LeftArm:[330f,3f,42f],RightArm:[334f,0f,323f]}}
+execute if score sea zTEST matches 1.. unless entity @e[name=" hi_book "] run summon armor_stand 0 103 -92 {Rotation:[180f,0f],Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,equipment:{feet:{id:"leather_boots",count:1,components:{"minecraft:dyed_color":0}},legs:{id:"leather_leggings",count:1,components:{"minecraft:dyed_color":0}},chest:{id:"leather_chestplate",count:1,components:{"minecraft:dyed_color":0}},head:{id:"player_head",count:1,components:{"minecraft:profile":"hi_book"}},mainhand:{id:"redstone_torch",count:1}},CustomName:{"text":" hi_book ","color":"black","bold":true},CustomNameVisible:1b,DisabledSlots:2039583,Pose:{LeftArm:[330f,3f,42f],RightArm:[334f,0f,323f]}}
 execute if score sea zTEST matches 1.. if entity @e[name=" hi_book ",nbt={Pos:[0.5d,93.0d,-91.5d]}] run playsound minecraft:ambient.cave block @a 0 103 -92
 execute if score sea zTEST matches 1.. if entity @e[name=" hi_book "] run tp @e[limit=1,name=" hi_book "] 0 103 -92
 execute if score sea zTEST matches 1.. run data merge entity @e[limit=1,name=" hi_book "] {CustomNameVisible:1}
 execute if score sea zTEST matches 0 run tp @e[name=" hi_book "] 0 93 -92
 execute if score sea zTEST matches 0 run data merge entity @e[limit=1,name=" hi_book "] {CustomNameVisible:0}
 
-execute unless data entity @e[name=" wumingyo ",limit=1] HandItems[0].id if score sayallplayer zTEST matches 1.. run tellraw @a [{"text":"謝謝","color":"yellow","bold":true}]
-execute store result score sayallplayer zTEST run data get entity @e[name=" wumingyo ",limit=1] HandItems[0].id
+execute unless data entity @e[name=" wumingyo ",limit=1] equipment.mainhand.id if score sayallplayer zTEST matches 1.. run tellraw @a [{"text":"謝謝","color":"yellow","bold":true}]
+execute store result score sayallplayer zTEST run data get entity @e[name=" wumingyo ",limit=1] equipment.mainhand.id
 
 
 #2370 280 2280

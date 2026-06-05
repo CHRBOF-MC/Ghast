@@ -50,7 +50,7 @@ execute as @a if score @s ramdon matches 1.. run function soso:item/banner/fly
 
 
 
-effect give @a[tag=start,team=Rg,nbt=!{active_effects:[{id:"minecraft:regeneration"}]}] minecraft:regeneration 999999 0 true
+effect give @a[tag=start,team=Rg,nbt=!{active_effects:[{id:"minecraft:regeneration"}]}] minecraft:regeneration infinite 0 true
 effect give @a[tag=start,team=Rg] minecraft:slowness 2 0 true
 execute as @a[tag=start,team=Rg,nbt=!{HurtTime:0s}] at @s if entity @p[distance=..5,team=Gc,tag=start] run effect give @s minecraft:speed 2 3 true
 effect give @a[tag=start,team=Rg] minecraft:resistance 2 3 true
@@ -62,7 +62,7 @@ effect give @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{nonslow:1
 
 
 
-effect give @a minecraft:saturation 9999 0 true
+effect give @a minecraft:saturation infinite 0 true
 effect give @a[tag=start,team=Rg,nbt=!{SelectedItem:{components:{"minecraft:custom_data":{Visclear:1b}}}}] minecraft:invisibility 1 0 true
 effect give @a[tag=start,team=Rg] minecraft:weakness 1 200 true
 execute at @a[tag=start,team=Rg,nbt={active_effects:[{id:"minecraft:invisibility"}]},nbt={SelectedItem:{components:{"minecraft:custom_data":{Visclear:1b}}}}] run playsound minecraft:entity.ghast.ambient block @a

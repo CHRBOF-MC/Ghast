@@ -22,7 +22,7 @@ setblock 77 110 11 minecraft:end_rod[facing=down]
 setblock 82 110 11 minecraft:end_rod[facing=down]
 
 
-summon minecraft:armor_stand 109 101 13 {Rotation:[90f],Tags:["tppall"],Invisible:1b,Invulnerable:1b,PersistenceRequired:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Small:1b,CustomName:"{\"text\":\"tp君\"}",CustomNameVisible:0b}
+summon minecraft:armor_stand 109 101 13 {Rotation:[90f,0f],Tags:["tppall"],Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Small:1b,CustomName:{"text":"tp君"},CustomNameVisible:0b}
 scoreboard players set @e[tag=tppall] zTEST 0
 scoreboard players set newstay zTEST 0
 scoreboard players set xmv zTEST 0

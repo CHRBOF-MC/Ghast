@@ -15,8 +15,8 @@ tag @s add start
 function soso:item/z/suv
 
 
-execute if score @s team matches 1 run effect give @s minecraft:resistance 999999 1 true
-execute if score @s team matches 2 run effect give @s minecraft:resistance 999999 2 true
+execute if score @s team matches 1 run effect give @s minecraft:resistance infinite 1 true
+execute if score @s team matches 2 run effect give @s minecraft:resistance infinite 2 true
 
 
 
