@@ -90,7 +90,7 @@ execute as @a[scores={Hurt=60..}] if data entity @s Inventory[].tag{attup:1b} ru
 
 
 scoreboard players set gkillin zTEST 0
-execute if score diff zTEST matches 2.. if score gkill zTEST matches 1.. as @a[team=Rg,gamemode=adventure,nbt={ActiveEffects:[{Id:24b}]}] at @s unless entity @e[type=minecraft:shulker,distance=..5] run function soso:alltimeuse/gkill
+execute if score diff zTEST matches 2.. if score gkill zTEST matches 1.. as @a[team=Rg,gamemode=adventure,nbt={ActiveEffects:[{Id:24}]}] at @s unless entity @e[type=minecraft:shulker,distance=..5] run function soso:alltimeuse/gkill
 
 #give @p minecraft:white_banner{Nonknow:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:4},{Pattern:mc,Color:4},{Pattern:tt,Color:4},{Pattern:mr,Color:4}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"抗退護符\",\"color\":\"gold\",\"bold\":\"true\"}]",Lore:["\"放置副手能抵抗鬼的擊退5秒，\"","\"放置於主手可緩慢恢復抵抗時間。\""]}}
 #give @p minecraft:white_banner{regeneration:1b,BlockEntityTag:{Base:10,Patterns:[{Pattern:cbo,Color:6},{Pattern:mc,Color:6},{Pattern:tt,Color:6},{Pattern:mr,Color:6}]},AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Name:"generic.knockback_resistance",Amount:100.0d,Operation:0,UUID:[I;493758772,329335813,287137220,275225176],Slot:"offhand"}],HideFlags:32,display:{Name:"[{\"text\":\"\"},{\"text\":\"恢復護符\",\"color\":\"gold\",\"bold\":\"true\"}]"}}
