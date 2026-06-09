@@ -78,4 +78,3 @@ execute unless score modattset zTEST matches 0.. run scoreboard players set moda
 bossbar set minecraft:boss4 color yellow
 tellraw @a ["",{"text":"詭指令包再讀入完成","color":"yellow","bold":true}]
 schedule function soso:alltimeuse/ramdonsum 1t
-schedule function soso:alltimeuse/alltimeuse 1t

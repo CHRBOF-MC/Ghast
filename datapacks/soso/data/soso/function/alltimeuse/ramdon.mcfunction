@@ -1,3 +1,2 @@
-scoreboard players operation ramdon zTEST = @e[tag=ramdonc,limit=1,sort=random] ramdon
+execute store result score ramdon zTEST run random value 0..9
 scoreboard players operation @s ramdon = ramdon zTEST
-

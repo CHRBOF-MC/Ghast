@@ -113,7 +113,7 @@ execute if score hurt zTEST matches 1 run effect clear @a[nbt=!{HurtTime:0s}] mi
 scoreboard players set @a Hurt 0
 scoreboard players set @a sneak 0
 
-schedule function soso:alltimeuse/alltimeuse 1t
+
 
 execute at @a[tag=expboo] at @e[distance=..20,type=minecraft:experience_orb,limit=1] run summon minecraft:tnt
 execute at @a[tag=expboo] as @e[distance=..20,type=minecraft:experience_orb] run kill @s
