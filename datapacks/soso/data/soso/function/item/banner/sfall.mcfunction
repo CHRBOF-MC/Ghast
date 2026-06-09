@@ -1,8 +1,8 @@
 #讀取
 
-execute unless data entity @s Inventory[{Slot:-106b}].tag{sfall:1b} unless data entity @s SelectedItem.tag{sfall:1b} run tag @s add onA
-execute unless data entity @s Inventory[{Slot:-106b}].tag{sfall:1b} if data entity @s SelectedItem.tag{sfall:1b} run tag @s add onS
-execute if data entity @s Inventory[{Slot:-106b}].tag{sfall:1b} unless data entity @s SelectedItem.tag{sfall:1b} run tag @s add onF
+execute unless items entity @s weapon.offhand *[minecraft:custom_data~{sfall:1b}] unless data entity @s SelectedItem.components.minecraft:custom_data{sfall:1b} run tag @s add onA
+execute unless items entity @s weapon.offhand *[minecraft:custom_data~{sfall:1b}] if data entity @s SelectedItem.components.minecraft:custom_data{sfall:1b} run tag @s add onS
+execute if items entity @s weapon.offhand *[minecraft:custom_data~{sfall:1b}] unless data entity @s SelectedItem.components.minecraft:custom_data{sfall:1b} run tag @s add onF
 
 
 

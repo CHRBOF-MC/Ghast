@@ -1,5 +1,5 @@
 
-execute store result score @s zTEST run data get entity @s Inventory[].tag{attup:1b}.AttributeModifiers[{AttributeName:"attack_damage"}].Amount 100
+execute store result score @s zTEST run data get entity @s Inventory[].components{"minecraft:custom_data":{attup:1b}}.minecraft:attribute_modifiers[{type:"minecraft:attack_damage"}].amount 100
 scoreboard players add @s zTEST 7
 
 clear @s[scores={zTEST=..119}] minecraft:diamond_ore[custom_data~{attup:1b}]

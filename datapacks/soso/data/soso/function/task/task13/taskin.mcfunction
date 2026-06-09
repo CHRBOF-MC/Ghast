@@ -2,7 +2,7 @@
 
 scoreboard players set Gc task13 0
 scoreboard players set @a task13 0
-execute at @e[tag=task13] as @a[distance=..10,gamemode=adventure] at @s if block ~ ~-0.1 ~ minecraft:emerald_block store result score @s task13 run data get entity @s SelectedItem.tag{sfall:1b}.AttributeModifiers[{AttributeName:"緩降"}].Amount 10
+execute at @e[tag=task13] as @a[distance=..10,gamemode=adventure] at @s if block ~ ~-0.1 ~ minecraft:emerald_block store result score @s task13 run data get entity @s SelectedItem.components.minecraft:custom_data{sfall:1b}.緩降 10
 
 scoreboard players operation Gc task13 > @a task13
 scoreboard players operation Gc task13 /= 10 zTEST

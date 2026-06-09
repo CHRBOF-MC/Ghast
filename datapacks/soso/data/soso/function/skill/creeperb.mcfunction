@@ -6,9 +6,9 @@ tag @a remove creeper
 
 
 execute at @e[tag=creeper,nbt={PortalCooldown:1}] run effect give @a[distance=..7] minecraft:resistance 1 4 true
-execute at @e[tag=creeper,nbt={PortalCooldown:1}] as @a if data entity @s[distance=..7] Inventory[{Slot:-106b}].tag{Nonknow:1b} run scoreboard players set @s know 1
-execute at @e[tag=creeper,nbt={PortalCooldown:1}] as @a if data entity @s[distance=..7] Inventory[{Slot:-106b}].tag{sfall:1b} run scoreboard players set @s slowdown 1
-execute at @e[tag=creeper,nbt={PortalCooldown:1}] as @a if data entity @s[distance=..7] Inventory[{Slot:-106b}].tag{speedin:1b} run scoreboard players set @s speed 1
+execute at @e[tag=creeper,nbt={PortalCooldown:1}] as @a if items entity @s[distance=..7] weapon.offhand *[minecraft:custom_data~{Nonknow:1b}] run scoreboard players set @s know 1
+execute at @e[tag=creeper,nbt={PortalCooldown:1}] as @a if items entity @s[distance=..7] weapon.offhand *[minecraft:custom_data~{sfall:1b}] run scoreboard players set @s slowdown 1
+execute at @e[tag=creeper,nbt={PortalCooldown:1}] as @a if items entity @s[distance=..7] weapon.offhand *[minecraft:custom_data~{speedin:1b}] run scoreboard players set @s speed 1
 execute unless entity @e[tag=creeper] run effect clear @a[team=Gc] minecraft:resistance
 execute unless entity @e[tag=creeper] run effect give @a[scores={team=2}] minecraft:resistance 999999 1 true
 execute unless entity @e[tag=creeper] run effect give @a[scores={team=1}] minecraft:resistance 999999 0 true

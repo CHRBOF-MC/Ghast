@@ -3,7 +3,7 @@
 scoreboard players set Gc task12 0
 scoreboard players set @a task12 0
 
-execute at @e[tag=task12] as @a[distance=..10,gamemode=adventure] at @s if block ~ ~-0.1 ~ minecraft:emerald_block store result score @s task12 run data get entity @s SelectedItem.tag{speedin:1b}.AttributeModifiers[{AttributeName:"加速"}].Amount 10
+execute at @e[tag=task12] as @a[distance=..10,gamemode=adventure] at @s if block ~ ~-0.1 ~ minecraft:emerald_block store result score @s task12 run data get entity @s SelectedItem.components.minecraft:custom_data{speedin:1b}.加速 10
 
 scoreboard players operation Gc task12 > @a task12
 scoreboard players operation Gc task12 /= 10 zTEST

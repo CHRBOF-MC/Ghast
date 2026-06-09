@@ -3,6 +3,7 @@ scoreboard objectives add know dummy
 scoreboard objectives add speed dummy
 scoreboard objectives add fly dummy
 scoreboard objectives add slowdown dummy
+scoreboard objectives add zombiesum dummy
 
 scoreboard objectives add gkills dummy
 scoreboard objectives add ramdon dummy
