@@ -2,7 +2,7 @@
 
 scoreboard players set Gc task10 0
 execute at @e[tag=task10] as @a[team=Gc,distance=..10,gamemode=adventure] at @s if block ~ ~-1 ~ minecraft:emerald_block run effect give @s minecraft:slowness 10 10
-execute at @e[tag=task10] as @a[team=Gc,distance=..10,gamemode=adventure] at @s if block ~ ~-1 ~ minecraft:emerald_block run effect give @s minecraft:jump_boost 10 225
+#execute at @e[tag=task10] as @a[team=Gc,distance=..10,gamemode=adventure] at @s if block ~ ~-1 ~ minecraft:emerald_block run effect give @s minecraft:jump_boost 10 225
 execute at @e[tag=task10] as @a[team=Gc,distance=..10,gamemode=adventure] at @s if block ~ ~-1 ~ minecraft:emerald_block run scoreboard players set Gc task10 100
 
 

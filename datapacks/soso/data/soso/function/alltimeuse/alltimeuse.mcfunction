@@ -133,9 +133,9 @@ scoreboard players set @a dietest 0
 execute as @a[team=Rg] store result score @s crit3 run attribute @s minecraft:attack_damage get 6
 
 execute as @a[team=Rg,scores={crit3=1..,crit=1..}] if score @s crit > @s crit3 run tag @s add crit
-execute as @a[team=Rg,scores={crit3=1..,crit=1..}] run tellraw @a {"score":{"name":"@s","objective":"crit"},"color":"yellow","bold":false}
+#execute as @a[team=Rg,scores={crit3=1..,crit=1..}] run tellraw @a {"score":{"name":"@s","objective":"crit"},"color":"yellow","bold":false}
 execute as @a[tag=crit] run scoreboard players operation @s crit -= @s crit3
-execute as @a[tag=crit] run tellraw @a {"score":{"name":"@s","objective":"crit"},"color":"yellow","bold":false}
+#execute as @a[tag=crit] run tellraw @a {"score":{"name":"@s","objective":"crit"},"color":"yellow","bold":false}
 execute as @a[tag=crit] at @s run scoreboard players operation @p[team=Gc] crit2 += @s crit
 execute as @a[team=Gc,scores={crit2=40..}] run effect give @s minecraft:instant_health 1 0 true
 execute as @a[team=Gc,scores={crit2=40..}] run scoreboard players remove @s crit2 40
