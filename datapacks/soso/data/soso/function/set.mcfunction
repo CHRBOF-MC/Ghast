@@ -32,6 +32,7 @@ scoreboard objectives add team dummy
 scoreboard objectives setdisplay list team
 scoreboard objectives setdisplay sidebar skyway
 scoreboard objectives add skyway dummy {"text":"遊戲資訊","color":"yellow","bold":true}
+scoreboard objectives add CODENAME dummy {"text":"遊戲核心代號","color":"yellow","bold":true}
 scoreboard objectives setdisplay below_name hp
 scoreboard players set -1 zTEST -1
 scoreboard players set 0 zTEST 0

@@ -5,7 +5,7 @@ execute unless items entity @s weapon.offhand *[minecraft:custom_data~{fly:1b}] 
 execute if items entity @s weapon.offhand *[minecraft:custom_data~{fly:1b}] unless data entity @s SelectedItem.components.minecraft:custom_data{fly:1b} run tag @s add onF
 
 
-effect clear @s[team=Rg] minecraft:levitation
+attribute @s minecraft:gravity base reset
 
 #隨時
 scoreboard players remove @s[scores={fly=..0}] fly 10
@@ -26,7 +26,7 @@ scoreboard players set @s[tag=onS,scores={fly=1..39}] fly 0
 
 
 #在副手
-effect give @s[tag=onF,scores={fly=1..}] minecraft:levitation 1 255
+execute if entity @s[tag=onF,scores={fly=1..}] run attribute @s minecraft:gravity base set 0
 
 scoreboard players remove @s[tag=onF,scores={fly=20..}] fly 20
 scoreboard players set @s[tag=onF,scores={fly=1..19}] fly 0

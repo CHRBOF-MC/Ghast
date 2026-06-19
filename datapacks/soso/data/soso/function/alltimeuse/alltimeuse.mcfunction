@@ -2,6 +2,8 @@ scoreboard players remove @a tasktalk 1
 scoreboard players add time visitmode 1
 execute if score time visitmode matches 20.. run function soso:alltimeuse/t1
 
+execute as @a unless score @s CODENAME matches 1 run function soso:playerin
+
 
 #scoreboard players set @a[scores={tasktalk=..-10}] tasktalk 10
 

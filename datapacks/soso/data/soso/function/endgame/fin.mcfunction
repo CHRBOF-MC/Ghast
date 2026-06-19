@@ -1,6 +1,8 @@
 gamemode adventure @a
 scoreboard players set @a ghastnear 100
 clear @a
+scoreboard players set @a CODENAME 1
+execute as @a run attribute @s minecraft:gravity base reset
 function soso:stay/reset
 function soso:sand/reset
 

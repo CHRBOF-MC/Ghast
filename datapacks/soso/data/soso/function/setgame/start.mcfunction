@@ -1,3 +1,6 @@
+scoreboard players set * CODENAME -1
+scoreboard players set @a CODENAME 1
+
 execute as @a[team=Gc] run function soso:item/suv
 execute as @a[team=Rg,scores={team=0}] run function soso:item/ghast1
 execute as @a[team=Rg,scores={team=1}] run function soso:item/ghast2
