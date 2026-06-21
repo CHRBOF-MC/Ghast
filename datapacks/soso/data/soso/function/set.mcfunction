@@ -5,6 +5,15 @@ scoreboard objectives add fly dummy
 scoreboard objectives add slowdown dummy
 scoreboard objectives add zombiesum dummy
 
+scoreboard objectives add knockback_resistance dummy
+scoreboard objectives add x dummy
+scoreboard objectives add y dummy
+scoreboard objectives add z dummy
+scoreboard objectives add ksx dummy
+scoreboard objectives add ksy dummy
+scoreboard objectives add ksz dummy
+scoreboard objectives add kst dummy
+
 scoreboard objectives add gkills dummy
 scoreboard objectives add ramdon dummy
 scoreboard objectives add zTEST dummy

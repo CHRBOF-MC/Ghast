@@ -15,3 +15,4 @@ tp @e[tag=raggo,nbt={PortalCooldown:0}] ~ ~-3000 ~
 
 
 execute if entity @e[tag=raggo] run schedule function soso:skill/ravagerb 1t
+execute unless entity @e[tag=raggo] as @a[team=Gc] run function soso:skill/ravagerc
